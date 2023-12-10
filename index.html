@@ -23,12 +23,14 @@
     </div>
 
     <div class="cartTab">
-        <h1 title="Корзина">Корзина, <span class="span_plus">1 товар</span></h1>
+        <div class="cart_flex">
+            <h1 title="Корзина">Корзина, <span class="span_plus">1 товар</span></h1>
+            <button class="close_times">X</button>
+        </div>
 
         <div class="big-block">
-
             <div class="block_1">
-                <input class="checkbox" type="checkbox" name="Name">
+                <input class="checkbox" type="checkbox" checked name="Name">
                 <p class="p_text">Снять все</p>
             </div>
 
@@ -40,7 +42,7 @@
 
             <div class="box_view">
 
-                <input class="checkbox_2" type="checkbox" name="Name">
+                <input class="checkbox_2" type="checkbox" checked name="Name">
                 <img class="cover" src="https://images.uzum.uz/clir1ql6sfhjvlnagn0g/t_product_240_high.jpg"
                     alt="Геймпад Sony DualSense беспроводной, для PlayStation 5">
 
@@ -73,23 +75,23 @@
             </div>
 
             <div class="price">
-                <p class="new_price">989 000 сум</p>
+                <p class="new_price" id="price1">989 000 сум</p>
                 <p class="old_price">1 700 000 сум</p>
             </div>
 
 
             <div class="flex">
 
-                <div class="counter">
-                    <span class="minus-line">
+                <div class="counter count1">
+                    <span class="minus-line" onclick="minus()">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M1 1h16" />
                         </svg>
                     </span>
-                    <span class="digit">1</span>
-                    <span class="plus">
+                    <span class="digit" id="count1">1</span>
+                    <span class="plus" onclick="plus()">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -111,64 +113,9 @@
 
             </div>
 
-
-
-
-
         </div>
 
-        <!--   <div class="listCart">
-            <div class="item2">
-                <div class="image">
-                    <img src="./img/table_1.png" alt="">
-                </div>
-                <div class="name">
-                    Name
-                </div>
-                <div class="totalPrice">
-                    $200
-                </div>
-                <div class="quantity">
-                   <span class="minus"><</span>
-                   <span class=>1</span>
-                   <span class="plus">></span>
-                </div>
-            </div>
-        </div>
-        <div class="btn">
-            <button class="close2">X</button>
-            <button id="checkOut">CHECK Out</button>
-        </div> -->
     </div>
-
-
-
-    <!-- <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-    </div>
-
-
-    <span onclick="openNav()">open</span>
-
-    
-    <div id="main">
-        ...
-    </div>
-
-
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    </script> -->
 
     <script src="modules/db.js"></script>
     <script src="script.js"></script>

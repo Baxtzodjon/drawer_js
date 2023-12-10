@@ -18,7 +18,7 @@ function reload(product) {
     cont.innerHTML = ""
 
     for (let item of product) {
-        // crate
+        // create
         let div_item = document.createElement('div')
         let img = document.createElement('img')
         let descrip_div = document.createElement('div')
@@ -74,13 +74,36 @@ function reload(product) {
 // innerHTML - он покажить HTML элемент тоже а textContent только тексты
 
 let open_Cart = document.querySelector('[data-cart]')
-let clsoeCart = document.querySelector('.close2')
+let closeCart = document.querySelector('.close_times')
 let body = document.querySelector('body')
 
 open_Cart.onclick = () => {
     body.classList.toggle('showCart')
 }
 
-clsoeCart.onclick = () => {
+closeCart.onclick = () => {
     body.classList.toggle('showCart')
+}
+
+
+let count = 1;
+let price = 989000;
+
+function plus() {
+    count++;
+    price *= 2;
+    updateDisplay();
+}
+
+function minus() {
+    if (count > 1) {
+        count--;
+        price /= 2;
+        updateDisplay();
+    }
+}
+
+function updateDisplay() {
+    document.getElementById("count1").innerHTML = count;
+    document.getElementById("price1").innerHTML = price;
 }

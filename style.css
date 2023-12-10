@@ -138,15 +138,27 @@ body.showCart .cartTab {
     inset: 0 0 0 auto;
 }
 
-/* body.showCart {
-    transform: translateX(-250px);
-} */
-
 .cartTab h1 {
     padding: 20px;
     margin: 0;
     color: #1f2026;
     font-size: 32px;
+}
+
+.close_times {
+    all: unset;
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+    color: #1f2026;
+    
+}
+
+.cart_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .span_plus {
@@ -230,7 +242,7 @@ body.showCart .cartTab {
 
 .big-block {
     width: 400px;
-    height: 400px;
+    height: 360px;
     border: 1px solid #c1c0c0;
 }
 
